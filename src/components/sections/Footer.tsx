@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Github, ExternalLink, ArrowUp, Mail, Twitter } from 'lucide-react';
-import filecoinLogo from '@/assets/filecoin-logo.png';
+import filecoinLogo from '@/assets/filecoin.png';
 
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
