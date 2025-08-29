@@ -2,39 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* DataForge Hub Design System - Filecoin Brand Colors & Animations
+All colors MUST be HSL for consistency with design system.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Filecoin Brand Colors */
+    --filecoin-azure: 207 100% 50%;        /* #0090FF primary azure blue */
+    --filecoin-light: 206 87% 63%;         /* #44b4f4 light blue */
+    --filecoin-dark: 215 95% 27%;          /* #044498 dark blue */
+    
+    /* Neutral Grays */
+    --text-primary: 205 25% 47%;           /* #5f7e90 */
+    --text-secondary: 210 35% 16%;         /* #192c39 */
+    --background-light: 240 50% 98%;       /* #F9F9F9 */
+    
+    /* Design System Tokens */
+    --background: 240 50% 98%;
+    --foreground: 210 35% 16%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 210 35% 16%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --popover-foreground: 210 35% 16%;
+    
+    --primary: 207 100% 50%;               /* Filecoin azure */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 206 87% 63%;              /* Filecoin light */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 220 13% 91%;
+    --muted-foreground: 205 25% 47%;
+    
+    --accent: 215 95% 27%;                 /* Filecoin dark */
+    --accent-foreground: 0 0% 100%;
+    
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 207 100% 50%;
+    
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--filecoin-light)), hsl(var(--filecoin-azure)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--filecoin-azure)), hsl(var(--filecoin-dark)));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100% / 0.05), hsl(0 0% 100% / 0.02));
+    
+    /* Animation Variables */
+    --glow-azure: 0 0 20px hsl(var(--filecoin-azure) / 0.3);
+    --glow-strong: 0 0 40px hsl(var(--filecoin-azure) / 0.5);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -56,50 +78,189 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    /* Dark mode for DataForge Hub */
+    --background: 210 35% 16%;           /* Dark background */
+    --foreground: 240 50% 98%;           /* Light text */
+    
+    --card: 205 25% 20%;
+    --card-foreground: 240 50% 98%;
+    
+    --popover: 205 25% 20%;
+    --popover-foreground: 240 50% 98%;
+    
+    --primary: 207 100% 50%;             /* Keep Filecoin azure */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 205 25% 25%;
+    --secondary-foreground: 240 50% 98%;
+    
+    --muted: 205 25% 25%;
+    --muted-foreground: 240 20% 70%;
+    
+    --accent: 206 87% 63%;               /* Filecoin light */
+    --accent-foreground: 210 35% 16%;
+    
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --destructive-foreground: 240 50% 98%;
+    
+    --border: 205 25% 25%;
+    --input: 205 25% 25%;
+    --ring: 207 100% 50%;
+    
+    --sidebar-background: 210 35% 12%;
+    --sidebar-foreground: 240 50% 95%;
+    --sidebar-primary: 207 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 205 25% 18%;
+    --sidebar-accent-foreground: 240 50% 95%;
+    --sidebar-border: 205 25% 18%;
+    --sidebar-ring: 207 100% 50%;
   }
 }
 
+/* DataForge Hub Animations & Effects */
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+
+  /* Particle Animation Canvas */
+  .particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Glow Effects */
+  .glow-azure {
+    box-shadow: var(--glow-azure);
+  }
+
+  .glow-strong {
+    box-shadow: var(--glow-strong);
+  }
+
+  /* Hover Animations */
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--glow-azure);
+    transform: translateY(-2px);
+  }
+
+  /* Scale Bounce Animation */
+  .hover-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .hover-bounce:hover {
+    transform: scale(1.05);
+  }
+
+  /* Parallax Container */
+  .parallax-container {
+    transform-style: preserve-3d;
+  }
+
+  /* Animated Gradient Backgrounds */
+  .gradient-animated {
+    background: var(--gradient-primary);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Fade In Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  .fade-in-delay-1 {
+    animation-delay: 0.2s;
+  }
+
+  .fade-in-delay-2 {
+    animation-delay: 0.4s;
+  }
+
+  .fade-in-delay-3 {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Drawing Line Animation */
+  .draw-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 2s ease-in-out forwards;
+  }
+
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  /* Pulse Animation for Nodes */
+  .pulse-node {
+    animation: pulseNode 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseNode {
+    0%, 100% { 
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% { 
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Scroll Progress Bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform-origin: 0%;
+    z-index: 50;
   }
 }

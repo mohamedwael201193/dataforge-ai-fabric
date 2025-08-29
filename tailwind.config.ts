@@ -24,6 +24,14 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// Filecoin Brand Colors
+				'filecoin-azure': 'hsl(var(--filecoin-azure))',
+				'filecoin-light': 'hsl(var(--filecoin-light))',
+				'filecoin-dark': 'hsl(var(--filecoin-dark))',
+				'text-primary': 'hsl(var(--text-primary))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

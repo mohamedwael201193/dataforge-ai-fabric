@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import { HeroSection } from '@/components/sections/HeroSection';
+import { ProblemSection } from '@/components/sections/ProblemSection';
+import { SolutionSection } from '@/components/sections/SolutionSection';
+import { ValuePropositionSection } from '@/components/sections/ValuePropositionSection';
+import { TechnicalSection } from '@/components/sections/TechnicalSection';
+import { GTMSection } from '@/components/sections/GTMSection';
+import { FeedbackSection } from '@/components/sections/FeedbackSection';
+import { Footer } from '@/components/sections/Footer';
+import { ScrollProgress } from '@/components/ScrollProgress';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <ScrollProgress />
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <ValuePropositionSection />
+      <TechnicalSection />
+      <GTMSection />
+      <FeedbackSection />
+      <Footer />
     </div>
   );
 };
