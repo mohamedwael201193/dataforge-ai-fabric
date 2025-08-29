@@ -46,7 +46,7 @@ export const HeroSection: React.FC = () => {
 
         <div className="fade-in fade-in-delay-2 mb-12">
           <AnimatedButton 
-            variant="hero-outline" 
+            variant="hero" 
             size="xl" 
             onClick={scrollToNext}
             className="group"
