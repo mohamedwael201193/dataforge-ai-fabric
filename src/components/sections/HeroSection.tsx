@@ -1,4 +1,5 @@
 import React from 'react';
+import { ParticleAnimation } from '../ParticleAnimation';
 import { AnimatedButton } from '../ui/animated-button';
 import { ChevronDown } from 'lucide-react';
 import filecoinLogo from '@/assets/filecoin.png';
@@ -11,15 +12,7 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-filecoin-azure via-filecoin-light to-filecoin-dark">
-      {/* Spline 3D Background */}
-      <iframe 
-        src='https://my.spline.design/interactiveaiwebsite-ipIGnv9sIwZzUVESYvWpicq1/' 
-        frameBorder='0' 
-        width='100%' 
-        height='100%'
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        title="3D Interactive Background"
-      />
+      <ParticleAnimation />
       
       {/* Header with Filecoin Logo */}
       <header className="absolute top-0 left-0 right-0 z-20 p-6">
