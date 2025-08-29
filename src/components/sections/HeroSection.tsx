@@ -78,7 +78,7 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 z-5"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/5 z-5"></div>
     </section>
   );
 };
