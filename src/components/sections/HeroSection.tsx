@@ -2,7 +2,7 @@ import React from 'react';
 import { ParticleAnimation } from '../ParticleAnimation';
 import { AnimatedButton } from '../ui/animated-button';
 import { ChevronDown } from 'lucide-react';
-import filecoinLogo from '@/assets/filecoin-logo.png';
+import filecoinLogo from '@/assets/filecoin.png';
 
 export const HeroSection: React.FC = () => {
   const scrollToNext = () => {
