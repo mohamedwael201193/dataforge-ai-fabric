@@ -161,7 +161,7 @@ export const Footer: React.FC = () => {
             <div className="border-t border-white/20 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="text-white/60 text-sm">
-                  © 2024 DataForge Hub. Built for Filecoin Onchain Cloud Alpha Cohort hackathon.
+                  © 2025 DataForge Hub. Built for Filecoin Onchain Cloud Alpha Cohort hackathon.
                 </div>
                 <div className="flex items-center gap-6">
                   <span className="text-white/60 text-sm">Powered by</span>
