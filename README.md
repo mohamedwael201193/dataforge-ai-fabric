@@ -60,17 +60,10 @@ This is a design-phase project (Wave 1). No code execution needed. To view the d
 1. Visit [https://dataforge-ai-filecoin.vercel.app/](https://dataforge-ai-filecoin.vercel.app/)
 2. Explore sections for problem, solution, and technical details.
 
-## Resources Used
 
-- [Synapse SDK GitHub](https://github.com/filecoin-project/synapse-sdk)
-- [Filecoin Warm Storage Services](https://github.com/filecoin-project/warm-storage)
-- [Filecoin Pay Contracts](https://github.com/filecoin-project/pay)
-- [PDP Contracts & FilCDN Docs](https://docs.filecoin.io/)
 
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
 
-## Contact
 
-For questions, reach out via GitHub Issues or the Akindo platform.
