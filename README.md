@@ -1,73 +1,76 @@
-# Welcome to your Lovable project
+# DataForge Hub
 
-## Project info
+[![Filecoin Onchain Cloud](https://img.shields.io/badge/Powered%20by-Filecoin%20Onchain%20Cloud-blue)](https://filecoin.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**URL**: https://lovable.dev/projects/0a588b45-9985-4477-9a4c-34b7c3326a4b
+## Overview
 
-## How can I edit this code?
+DataForge Hub is a decentralized marketplace for crowdsourcing and monetizing high-quality AI training datasets. Built on Filecoin Onchain Cloud, it enables global contributors to upload, verify, and sell data snippets with on-chain payments and fast retrieval. This reduces AI biases through diverse, verifiable data sources, democratizing access for AI developers and researchers.
 
-There are several ways of editing your application.
+This repository hosts the product design documentation for Wave 1 of the Filecoin Onchain Cloud Alpha Cohort. The interactive design showcase is live at: [https://dataforge-ai-filecoin.vercel.app/](https://dataforge-ai-filecoin.vercel.app/)
 
-**Use Lovable**
+## Problem Statement
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0a588b45-9985-4477-9a4c-34b7c3326a4b) and start prompting.
+AI models often suffer from biases due to reliance on centralized, limited datasets from big tech companies. Sourcing diverse, high-quality data is costly, inaccessible for smaller teams, and lacks transparency or verifiability. This leads to unfair outcomes in critical applications like healthcare and finance, affecting underrepresented groups and hindering innovation.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Solution
 
-**Use your preferred IDE**
+DataForge Hub leverages Filecoin Onchain Cloud to create a composable, on-chain ecosystem:
+- **Uploads**: Contributors upload data via a web app, stored on Filecoin Warm Storage Service with PDP (Proof of Data Possession) for verifiability.
+- **Monetization**: Buyers purchase access using Filecoin Pay (supporting one-time or streaming payments in FIL/ERC-20).
+- **Retrieval**: Fast delivery via FilCDN, ensuring SLAs and CDN-speed access.
+- **Incentives**: On-chain community voting rewards quality contributions, fostering a self-sustaining marketplace.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The Synapse SDK provides seamless JS/TS integration for all interactions.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Value Proposition
 
-Follow these steps:
+- **For Contributors**: Earn passive income by sharing verifiable data.
+- **For Buyers (AI Teams)**: Access affordable, diverse datasets to build unbiased models.
+- **For the Ecosystem**: Reduces AI biases, boosts Filecoin adoption in AI data markets.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Technical Design
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Architecture Diagram
+(Embed or link to a diagram; for now, refer to the live site for an interactive flowchart.)
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Frontend**: Web app using Synapse SDK for uploads, payments, and retrievals.
+- **Backend Integration**:
+  - Filecoin Warm Storage Service: Combines PDP verification with integrated payments for faster storage.
+  - Filecoin Pay: Toolkit for accepting FIL/ERC-20, including streaming for ongoing access.
+  - FilCDN: Blazing-fast CDN for PDP deals.
+  - Depth: Full-stack usage beyond basic storage—composable services for verifiability, payments, and SLAs.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Go-to-Market Strategy
 
-**Edit a file directly in GitHub**
+- **Freemium Model**: Free uploads/browsing, paid premium access.
+- **Target Audience**: AI startups, researchers (e.g., integrate with Hugging Face).
+- **Revenue**: 5% transaction fees.
+- **Ambition**: Scale to 1M+ datasets, validate PMF for Filecoin Onchain Cloud in AI.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Pain Points & Feedback for Filecoin Onchain Cloud
 
-**Use GitHub Codespaces**
+- SDK docs could include more AI-specific examples.
+- Easier integrations for streaming payments in data marketplaces.
+- Suggestions: Add built-in community voting modules to Synapse SDK.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Setup Instructions
 
-## What technologies are used for this project?
+This is a design-phase project (Wave 1). No code execution needed. To view the design:
+1. Visit [https://dataforge-ai-filecoin.vercel.app/](https://dataforge-ai-filecoin.vercel.app/)
+2. Explore sections for problem, solution, and technical details.
 
-This project is built with:
+## Resources Used
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- [Synapse SDK GitHub](https://github.com/filecoin-project/synapse-sdk)
+- [Filecoin Warm Storage Services](https://github.com/filecoin-project/warm-storage)
+- [Filecoin Pay Contracts](https://github.com/filecoin-project/pay)
+- [PDP Contracts & FilCDN Docs](https://docs.filecoin.io/)
 
-## How can I deploy this project?
+## License
 
-Simply open [Lovable](https://lovable.dev/projects/0a588b45-9985-4477-9a4c-34b7c3326a4b) and click on Share -> Publish.
+MIT License. See [LICENSE](LICENSE) for details.
 
-## Can I connect a custom domain to my Lovable project?
+## Contact
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+For questions, reach out via GitHub Issues or the Akindo platform.
