@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
                 <ul className="space-y-3">
                   <li>
                     <a
-                      href="https://github.com/dataforge-hub/marketplace"
+                      href="http://github.com/mohamedwael201193/dataforge-ai-fabric"
                       className="text-white/80 hover:text-filecoin-azure transition-colors duration-200 flex items-center gap-2 group"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="mailto:team@dataforge.hub"
+                      href="mohamedwael2001193@gmail.com"
                       className="text-white/80 hover:text-filecoin-azure transition-colors duration-200 flex items-center gap-2"
                     >
                       <Mail className="h-4 w-4" />
@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://twitter.com/dataforge_hub"
+                      href="https://x.com/Mowael777"
                       className="text-white/80 hover:text-filecoin-azure transition-colors duration-200 flex items-center gap-2 group"
                       target="_blank"
                       rel="noopener noreferrer"
