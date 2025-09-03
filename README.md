@@ -56,7 +56,7 @@ The Synapse SDK provides seamless JS/TS integration for all interactions.
 
 ## Setup Instructions
 
-This is a design-phase project (Wave 1). No code execution needed. To view the design:
+
 1. Visit [https://dataforge-ai-filecoin.vercel.app/](https://dataforge-ai-filecoin.vercel.app/)
 2. Explore sections for problem, solution, and technical details.
 
